@@ -1,3 +1,5 @@
+package javaDSExamples;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -5,27 +7,27 @@ import java.util.Queue;
 public class QueueUsage {
     Queue<Integer> queue = new LinkedList<>();
 
-    QueueUsage(ArrayList<Integer> list){
+    public QueueUsage(ArrayList<Integer> list){
         this.queue.addAll(list);
     }
 
-    void addElement(int element){
+    public void addElement(int element){
         this.queue.add(element);
     }
 
-    int removeElement(){
+   public int removeElement(){
        return this.queue.remove();
     }
 
-    int checkNextElement(){
+    public int checkNextElement(){
         return this.queue.peek();
     }
 
-    boolean isEmpty(){
+    public boolean isEmpty(){
         return this.queue.size()==0;
     }
 
-    void printQueue(){
+    public void printQueue(){
         this.queue.stream().forEach(System.out::print);
     }
 }
